@@ -22,12 +22,12 @@ var elEncabezado = document.querySelector("header");
 
 var loPrincipal = document.querySelector("main");
 
-var lorenIpsum = ["párrafo","texto","escrito","pasaje","enunciado"];
+var lorenIpsum = [" el café","los gatos","dormir"," el tiramisú","pintar"];
 
 function setup() {
     noCanvas();
     createElement("h1", elSaludo).parent(elEncabezado).id("title");
-    createA("index.html", "index").parent("vinculos");
+    createA("index.html", "portada").parent("vinculos");
     createA("page.html", "page").parent("vinculos");
     if (dondeEstas) {
         portada();
@@ -37,8 +37,8 @@ function setup() {
 }
 
 function portada() {
-    createSpan("Estás en index.html").parent("title");
-    createElement('p','Y este es un '+random(lorenIpsum)+' en la portada.').parent(loPrincipal);
+    createSpan("Estás en la portada.html").parent("title");
+    createElement('p','Y me gusta mucho '+random(lorenIpsum)+' desde pequeña.').parent(loPrincipal);
     select("a:nth-child(1)").style("font-weight", "bold").style("color", "#000000");
 }
 
